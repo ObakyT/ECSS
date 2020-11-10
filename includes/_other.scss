@@ -1,0 +1,33 @@
+.rad {
+    border-radius: 5px;
+}
+
+.obj {
+    &--fit {
+        object-fit: cover;
+    }
+    &--con {
+        object-fit: contain;
+    }
+    &--cen {
+        object-position: center center;
+    }
+}
+
+.V3D{
+    perspective-origin: center center;
+    @for $i from 1 through 10 {
+        &#{$i}{
+            perspective: $i*100px;
+            & > * {
+                transform-style: preserve-3d;
+            }
+        }
+    }
+}
+
+@for $i from 0 through 11 {
+    .z#{$i}{
+        z-index: 1000 + $i;
+    }
+}

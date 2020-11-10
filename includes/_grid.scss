@@ -1,0 +1,118 @@
+@mixin screen($size) {
+    @if $size == 's' {
+        @media only screen and (min-width: 320px) {
+            @content;
+        }
+    } @else if $size == 'm' {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $size == 'l' {
+        @media only screen and (min-width: 1252px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    }
+}
+
+.g {
+    &__fit {
+        width: fit-content;
+    }
+    &__min {
+        width: min-content;
+    }
+    &__max {
+        width: max-content;
+    }
+    @for $i from 1 through 6 {
+        &#{$i} {
+            @include screen('s') {
+                @if $i/2 > 1 {
+                    width: 100%;
+                } @else {
+                    width: percentage($i/2);
+                }
+            }
+            @include screen('m') {
+                @if $i/3 > 1 {
+                    width: 100%;
+                } @else {
+                    width: percentage($i/3);
+                }
+            }
+            @include screen('l') {
+                width: percentage($i/6);
+            }
+        }
+    }
+    @for $i from 1 through 6 {
+        &#{$i}--max {
+            @include screen('s') {
+                @if $i/2 > 1 {
+                    width: 100%;
+                } @else {
+                    width: percentage($i/2);
+                }
+            }
+            @include screen('m') {
+                @if $i/3 > 1 {
+                    width: 100%;
+                } @else {
+                    width: percentage($i/3);
+                }
+            }
+            @media only screen and (min-width: 1024px) {
+                @if $i/4 > 1{
+                    width: 100% !important;
+                } @else {
+                    width: percentage($i/4) !important;
+                }
+            }
+            @include screen('l') {
+                width: percentage($i/6) !important;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .w#{$i}{
+        @include screen('s'){
+            @if $i/2 > 1 {
+                width: 100%;
+            } @else {
+                width: percentage($i/2);
+            }
+        }
+        @include screen('m'){
+            @if $i/3 > 1 {
+                width: 100%;
+            } @else {
+                width: percentage($i/3);
+            }
+        }
+        @include screen('l'){
+            @if $i/5 > 1 {
+                width: 100%;
+            } @else {
+                width: percentage($i/5);
+            }
+        }
+    }
+}
+
+.h {
+    &__full {
+        height: 100vh;
+    }
+    &__res {
+        height: fit-content;
+        @include screen(l) {
+            height: 100vh;
+        }
+    }
+}

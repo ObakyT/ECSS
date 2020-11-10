@@ -1,0 +1,49 @@
+@for $i from 0 through 10 {
+    .p#{$i}{
+        padding: $i/2 + em;
+    }
+    .pY#{$i}{
+        padding-top: $i/2 + em;
+        padding-bottom: $i/2 + em;
+    }
+    .pX#{$i}{
+        padding-right: $i/2 + em;
+        padding-left: $i/2 + em;
+    }
+    .pYa#{$i}{
+        padding-top: $i/2 + em;
+    }
+    .pYb#{$i}{
+        padding-bottom: $i/2 + em;
+    }
+    .pXa#{$i}{
+        padding-right: $i/2 + em;
+    }
+    .pXb#{$i}{
+        padding-left: $i/2 + em;
+    }
+
+    .m#{$i}{
+        margin: $i/2 + em;
+    }
+    .mY#{$i}{
+        margin-top: $i/2 + em;
+        margin-bottom: $i/2 + em;
+    }
+    .mX#{$i}{
+        margin-right: $i/2 + em;
+        margin-left: $i/2 + em;
+    }
+    .mYa#{$i}{
+        margin-top: $i/2 + em;
+    }
+    .mYb#{$i}{
+        margin-bottom: $i/2 + em;
+    }
+    .mXa#{$i}{
+        margin-right: $i/2 + em;
+    }
+    .mXb#{$i}{
+        margin-left: $i/2 + em;
+    }
+}

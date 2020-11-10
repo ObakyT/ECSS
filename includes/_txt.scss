@@ -1,0 +1,44 @@
+$align: (
+    cen: center,
+    left: left,
+    right: right,
+    just: justify
+);
+
+$just: (
+    iword: inter-word,
+    ichar: inter-character,
+);
+
+.txt {
+    &___up {
+        text-transform: uppercase;
+    }
+    &___cap {
+        text-transform: capitalize;
+    }
+    @each $var,$val in $align {
+        &___#{$var}{
+            text-align: $val;
+        }
+        &___#{$var}l{
+            text-align-last: $val;
+        }
+    }
+    @each $var,$val in $just {
+        &___#{$var}{
+            text-justify: $val;
+        }
+    }
+    &___ellip {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &___sm {
+        font-size: 80%;
+    }
+    &___md {
+        font-size: 90%;
+    }
+}

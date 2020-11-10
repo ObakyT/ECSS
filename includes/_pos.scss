@@ -1,0 +1,92 @@
+$pos: (
+    rel: relative,
+    fix: fixed,
+    abs: absolute,
+    stick: sticky
+);
+
+@each $var,$val in $pos {
+    .#{$var}{
+        position: $val;
+    }
+}
+
+@for $i from 0 through 20 {
+    .t#{$i}{
+        top: $i/2 + vh;
+    }
+    .b#{$i}{
+        bottom: $i/2 + vh;
+    }
+    .l#{$i}{
+        left: $i/2 + vh;
+    }
+    .r#{$i}{
+        right: $i/2 + vh;
+    }
+}
+
+.wrap {
+    margin: 0 auto;
+}
+.center__max {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.center {
+    @include screen('l') {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+    }
+}
+
+// Flex
+$flex-hor: (
+    start: flex-start,
+    end: flex-end,
+    cen: center,
+    btw: space-between,
+    ard: space-around,
+    even: space-evenly,
+);
+
+$flex-ver: (
+    start: flex-start,
+    end: flex-end,
+    cen: center,
+    base: baseline
+);
+
+.row, .col {
+    display: flex;
+}
+
+.row {
+    flex-flow: row wrap;
+}
+
+.col {
+    flex-flow: column wrap;
+}
+
+@each $var,$val in $flex-hor {
+    .hor__#{$var} {
+        justify-content: $val;
+    }
+}
+
+@each $var,$val in $flex-ver {
+    .ver__#{$var} {
+        align-items: $val;
+    }
+}
+
+@for $i from 1 through 6 {
+    .o#{$i} {
+        order: $i;
+    }
+}
