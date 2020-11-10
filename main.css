@@ -2020,6 +2020,12 @@ select::-ms-value {
   z-index: 1011;
 }
 
+@media print {
+  a:after {
+    content: " (" attr(href) ") ";
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;

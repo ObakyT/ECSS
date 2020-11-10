@@ -11,34 +11,34 @@ $just: (
 );
 
 .txt {
-    &___up {
+    &__up {
         text-transform: uppercase;
     }
-    &___cap {
+    &__cap {
         text-transform: capitalize;
     }
     @each $var,$val in $align {
-        &___#{$var}{
+        &__#{$var}{
             text-align: $val;
         }
-        &___#{$var}l{
+        &__#{$var}l{
             text-align-last: $val;
         }
     }
     @each $var,$val in $just {
-        &___#{$var}{
+        &__#{$var}{
             text-justify: $val;
         }
     }
-    &___ellip {
+    &__ellip {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &___sm {
+    &__sm {
         font-size: 80%;
     }
-    &___md {
+    &__md {
         font-size: 90%;
     }
 }
