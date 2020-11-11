@@ -3,3 +3,16 @@
 @import './includes/effects';
 @import './includes/forms';
 @import './includes/tables';
+
+html {
+    font-family: 'Lato';
+    color: $darkx;
+    &[lang=ar] {
+        text-align: right;
+        // direction: rtl;
+    }
+}
+
+body {
+    background-color: $lightx;
+}

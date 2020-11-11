@@ -282,4 +282,17 @@ table td, table th {
   padding: .4em 0;
   text-align: center;
 }
+
+html {
+  font-family: 'Lato';
+  color: var(--color-darkx);
+}
+
+html[lang=ar] {
+  text-align: right;
+}
+
+body {
+  background-color: var(--color-lightx);
+}
 /*# sourceMappingURL=obaky.css.map */
