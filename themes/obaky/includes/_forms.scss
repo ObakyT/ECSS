@@ -32,9 +32,9 @@ input, button {
             top: 50%;
             right: 1em;
             transform: translateY(-50%);
-            content: url('../img/icons/arrow_down_light.svg');
+            content: url('./img/icons/arrow_down_light.svg');
             @media (prefers-color-scheme: dark) {
-                content: url('../img/icons/arrow_down_dark.svg');
+                content: url('./img/icons/arrow_down_dark.svg');
             }
         }
         html[lang=ar] &:before {

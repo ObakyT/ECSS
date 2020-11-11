@@ -248,12 +248,12 @@ input, button {
   right: 1em;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  content: url("../img/icons/arrow_down_light.svg");
+  content: url("./img/icons/arrow_down_light.svg");
 }
 
 @media (prefers-color-scheme: dark) {
   .dropdown__select--box:before {
-    content: url("../img/icons/arrow_down_dark.svg");
+    content: url("./img/icons/arrow_down_dark.svg");
   }
 }
 
