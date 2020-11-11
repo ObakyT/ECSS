@@ -1,0 +1,58 @@
+input, button {
+    border: none;
+    outline: none;
+}
+
+.maxi__input {
+    margin: 0 auto;
+    border: rgba($dark-rgb, .12) 1px solid;
+    border-radius: 5px;
+    input {
+        width: 80%;
+        padding-left: .4em;
+    }
+    button {
+        width: 20%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+// Select
+.dropdown__select {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    &--box {
+        border-bottom: rgba($dark-rgb, .12) 1px solid;
+        position: relative;
+        padding: .4em;
+        &:before {
+            position: absolute;
+            top: 50%;
+            right: 1em;
+            transform: translateY(-50%);
+            content: url('../img/icons/arrow_down_light.svg');
+            @media (prefers-color-scheme: dark) {
+                content: url('../img/icons/arrow_down_dark.svg');
+            }
+        }
+        html[lang=ar] &:before {
+            right: unset;
+            left: 1em;
+        }
+    }
+    &--itembox {
+        position: absolute;
+        width: 100%;
+        display: none;
+        border: 1px solid rgba($dark-rgb, .12);
+        background: rgba($light-rgb, 1);
+    }
+    &--item {
+        padding: .4em;
+        &:hover {
+            background: rgba($dark-rgb, .12);
+        }
+    }
+}

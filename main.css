@@ -1786,65 +1786,65 @@ select::-ms-value {
   margin-left: 5em;
 }
 
-.txt___up {
+.txt__up {
   text-transform: uppercase;
 }
 
-.txt___cap {
+.txt__cap {
   text-transform: capitalize;
 }
 
-.txt___cen {
+.txt__cen {
   text-align: center;
 }
 
-.txt___cenl {
+.txt__cenl {
   text-align-last: center;
 }
 
-.txt___left {
+.txt__left {
   text-align: left;
 }
 
-.txt___leftl {
+.txt__leftl {
   text-align-last: left;
 }
 
-.txt___right {
+.txt__right {
   text-align: right;
 }
 
-.txt___rightl {
+.txt__rightl {
   text-align-last: right;
 }
 
-.txt___just {
+.txt__just {
   text-align: justify;
 }
 
-.txt___justl {
+.txt__justl {
   text-align-last: justify;
 }
 
-.txt___iword {
+.txt__iword {
   text-justify: inter-word;
 }
 
-.txt___ichar {
+.txt__ichar {
   text-justify: inter-character;
 }
 
-.txt___ellip {
+.txt__ellip {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.txt___sm {
+.txt__sm {
   font-size: 80%;
 }
 
-.txt___md {
+.txt__md {
   font-size: 90%;
 }
 

@@ -1,0 +1,25 @@
+.btn {
+    &__right {
+        text-align: right;
+        .btn {
+            display: inline-block;
+        }
+    }
+    padding: .4em .8em;
+    transition: .5s;
+    &:hover {
+        transform: scale(1.05);
+    }
+    @each $var, $val in $colors {
+        &--#{$var} {
+            @extend .btn;
+            background: $val;
+            color: #ffffff;
+        }
+        &--#{$var}__line {
+            background: transparent;
+            @extend .btn;
+            border: $val 1px solid;
+        }
+    }
+}

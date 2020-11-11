@@ -1,0 +1,113 @@
+:root {
+    --color-light: #ffffff;
+    --color-light-rgb: 255, 255, 255;
+
+    --color-lightx: #fafcfe;
+    --color-lightx-rgb: 250, 252, 254;
+
+    --color-lighty: #f9fcf0;
+    --color-lighty-rgb: 249, 252, 240;
+
+    --color-dark: #040404;
+    --color-dark-rgb: 4, 4, 4;
+
+    --color-darkx: #090909;
+    --color-darkx-rgb: 9, 9, 9;
+
+    --color-darky: #121212;
+    --color-darky-rgb: 12, 12, 12;
+
+    --color-prime: #5484f4;
+    --color-prime-rgb: 84, 132, 244;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-dark: #ffffff;
+        --color-dark-rgb: 255, 255, 255;
+
+        --color-darkx: #fafcfe;
+        --color-darkx-rgb: 250, 252, 254;
+
+        --color-darky: #f9fcf0;
+        --color-darky-rgb: 249, 252, 240;
+
+        --color-light: #040404;
+        --color-light-rgb: 4, 4, 4;
+
+        --color-lightx: #090909;
+        --color-lightx-rgb: 9, 9, 9;
+
+        --color-lighty: #121212;
+        --color-lighty-rgb: 12, 12, 12;
+    }
+}
+
+$light: var(--color-light);
+$light-rgb: var(--color-light-rgb);
+
+$lightx: var(--color-lightx);
+$lightx-rgb: var(--color-lightx-rgb);
+
+$lighty: var(--color-lighty);
+$lighty-rgb: var(--color-lighty-rgb);
+
+$dark: var(--color-dark);
+$dark-rgb: var(--color-dark-rgb);
+
+$darkx: var(--color-darkx);
+$darkx-rgb: var(--color-darkx-rgb);
+
+$darky: var(--color-darky);
+$darky-rgb: var(--color-darky-rgb);
+
+$prime: var(--color-prime);
+$prime-rgb: var(--color-prime-rgb);
+
+$colors: (
+    light: #{$light},
+    lightx: #{$lightx},
+    lighty: #{$lighty},
+
+    dark: #{$dark},
+    darkx: #{$darkx},
+    darky: #{$darky},
+
+    prime: #{$prime},
+
+);
+
+$colors-rgb: (
+    light: #{$light-rgb},
+    lightx: #{$lightx-rgb},
+    lighty: #{$lighty-rgb},
+
+    dark: #{$dark-rgb},
+    darkx: #{$darkx-rgb},
+    darky: #{$darky-rgb},
+    
+    prime: #{$prime-rgb},
+
+);
+
+@each $var,$val in $colors {
+    .#{$var} {
+        color: $val;
+    }
+
+    .bg__#{$var} {
+        background-color: $val;
+    }
+}
+
+.trans {
+    color: transparent;
+}
+
+.lightin {
+    color: #fefefe;
+}
+
+.shade {
+    box-shadow: rgba($darkx-rgb, .15) 0 0 2px;
+}
