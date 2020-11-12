@@ -1,7 +1,21 @@
 table {
-    td, th {
+    caption-side: bottom;
+    caption {
+        text-align: right;
+        padding: 1em;
+        font-size: 90%;
+    }
+    th, td {
         padding: .4em 0;
         @extend .shade;
-        text-align: center;
+        text-align: left;
+        padding-left: .4em;
+        cursor: default;
+        &:hover {
+            background-color: rgba(#3f3f3f, .05);
+            @media (prefers-color-scheme: dark) {
+                background-color: rgba(#fefefe, .05);
+            }
+        }
     }
 }

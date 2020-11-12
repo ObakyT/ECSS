@@ -1,9 +1,14 @@
 .btn {
-    &__right {
-        text-align: right;
+    &__right, &__cen {
         .btn {
             display: inline-block;
         }
+    }
+    &__right {
+        text-align: right;
+    }
+    &__cen {
+        text-align: center;
     }
     padding: .4em .8em;
     transition: .5s;

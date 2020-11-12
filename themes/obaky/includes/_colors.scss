@@ -19,6 +19,21 @@
 
     --color-prime: #5484f4;
     --color-prime-rgb: 84, 132, 244;
+
+    --color-info: #3d85c6;
+    --color-info-rgb: 61, 133, 198;
+
+    --color-danger: #cc4444;
+    --color-danger-rgb: 204, 68, 68;
+
+    --color-dis: #d9d9d9;
+    --color-dis-rgb: 217, 217, 217;
+
+    --color-success: #6aa84f;
+    --color-success-rgb: 106, 168, 79;
+
+    --color-warn: #e69138;
+    --color-warn-rgb: 230, 145, 56;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,6 +79,21 @@ $darky-rgb: var(--color-darky-rgb);
 $prime: var(--color-prime);
 $prime-rgb: var(--color-prime-rgb);
 
+$info: var(--color-info);
+$info-rgb: var(--color-info-rgb);
+
+$dis: var(--color-dis);
+$dis-rgb: var(--color-dis-rgb);
+
+$danger: var(--color-danger);
+$danger-rgb: var(--color-danger-rgb);
+
+$success: var(--color-success);
+$success-rgb: var(--color-success-rgb);
+
+$warn: var(--color-warn);
+$warn-rgb: var(--color-warn-rgb);
+
 $colors: (
     light: #{$light},
     lightx: #{$lightx},
@@ -74,6 +104,12 @@ $colors: (
     darky: #{$darky},
 
     prime: #{$prime},
+
+    info: #{$info},
+    dis: #{$dis},
+    danger: #{$danger},
+    success: #{$success},
+    warn: #{$warn},
 
 );
 
@@ -87,6 +123,12 @@ $colors-rgb: (
     darky: #{$darky-rgb},
     
     prime: #{$prime-rgb},
+
+    info: #{$info-rgb},
+    dis: #{$dis-rgb},
+    danger: #{$danger-rgb},
+    success: #{$success-rgb},
+    warn: #{$warn-rgb},
 
 );
 

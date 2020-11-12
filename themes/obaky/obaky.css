@@ -13,6 +13,16 @@
   --color-darky-rgb: 12, 12, 12;
   --color-prime: #5484f4;
   --color-prime-rgb: 84, 132, 244;
+  --color-info: #3d85c6;
+  --color-info-rgb: 61, 133, 198;
+  --color-danger: #cc4444;
+  --color-danger-rgb: 204, 68, 68;
+  --color-dis: #d9d9d9;
+  --color-dis-rgb: 217, 217, 217;
+  --color-success: #6aa84f;
+  --color-success-rgb: 106, 168, 79;
+  --color-warn: #e69138;
+  --color-warn-rgb: 230, 145, 56;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,6 +98,46 @@
   background-color: var(--color-prime);
 }
 
+.info {
+  color: var(--color-info);
+}
+
+.bg__info {
+  background-color: var(--color-info);
+}
+
+.dis {
+  color: var(--color-dis);
+}
+
+.bg__dis {
+  background-color: var(--color-dis);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.bg__danger {
+  background-color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.bg__success {
+  background-color: var(--color-success);
+}
+
+.warn {
+  color: var(--color-warn);
+}
+
+.bg__warn {
+  background-color: var(--color-warn);
+}
+
 .trans {
   color: transparent;
 }
@@ -96,26 +146,30 @@
   color: #fefefe;
 }
 
-.shade, table td, table th {
+.shade, table th, table td {
   -webkit-box-shadow: rgba(var(--color-darkx-rgb), 0.15) 0 0 2px;
           box-shadow: rgba(var(--color-darkx-rgb), 0.15) 0 0 2px;
 }
 
-.btn, .btn--light, .btn--light__line, .btn--lightx, .btn--lightx__line, .btn--lighty, .btn--lighty__line, .btn--dark, .btn--dark__line, .btn--darkx, .btn--darkx__line, .btn--darky, .btn--darky__line, .btn--prime, .btn--prime__line {
+.btn, .btn--light, .btn--light__line, .btn--lightx, .btn--lightx__line, .btn--lighty, .btn--lighty__line, .btn--dark, .btn--dark__line, .btn--darkx, .btn--darkx__line, .btn--darky, .btn--darky__line, .btn--prime, .btn--prime__line, .btn--info, .btn--info__line, .btn--dis, .btn--dis__line, .btn--danger, .btn--danger__line, .btn--success, .btn--success__line, .btn--warn, .btn--warn__line {
   padding: .4em .8em;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.btn__right .btn, .btn__right .btn--light, .btn__right .btn--light__line, .btn__right .btn--lightx, .btn__right .btn--lightx__line, .btn__right .btn--lighty, .btn__right .btn--lighty__line, .btn__right .btn--dark, .btn__right .btn--dark__line, .btn__right .btn--darkx, .btn__right .btn--darkx__line, .btn__right .btn--darky, .btn__right .btn--darky__line, .btn__right .btn--prime, .btn__right .btn--prime__line, .btn__right .btn--info, .btn__right .btn--info__line, .btn__right .btn--dis, .btn__right .btn--dis__line, .btn__right .btn--danger, .btn__right .btn--danger__line, .btn__right .btn--success, .btn__right .btn--success__line, .btn__right .btn--warn, .btn__right .btn--warn__line, .btn__cen .btn, .btn__cen .btn--light, .btn__cen .btn--light__line, .btn__cen .btn--lightx, .btn__cen .btn--lightx__line, .btn__cen .btn--lighty, .btn__cen .btn--lighty__line, .btn__cen .btn--dark, .btn__cen .btn--dark__line, .btn__cen .btn--darkx, .btn__cen .btn--darkx__line, .btn__cen .btn--darky, .btn__cen .btn--darky__line, .btn__cen .btn--prime, .btn__cen .btn--prime__line, .btn__cen .btn--info, .btn__cen .btn--info__line, .btn__cen .btn--dis, .btn__cen .btn--dis__line, .btn__cen .btn--danger, .btn__cen .btn--danger__line, .btn__cen .btn--success, .btn__cen .btn--success__line, .btn__cen .btn--warn, .btn__cen .btn--warn__line {
+  display: inline-block;
 }
 
 .btn__right {
   text-align: right;
 }
 
-.btn__right .btn, .btn__right .btn--light, .btn__right .btn--light__line, .btn__right .btn--lightx, .btn__right .btn--lightx__line, .btn__right .btn--lighty, .btn__right .btn--lighty__line, .btn__right .btn--dark, .btn__right .btn--dark__line, .btn__right .btn--darkx, .btn__right .btn--darkx__line, .btn__right .btn--darky, .btn__right .btn--darky__line, .btn__right .btn--prime, .btn__right .btn--prime__line {
-  display: inline-block;
+.btn__cen {
+  text-align: center;
 }
 
-.btn:hover, .btn--light:hover, .btn--light__line:hover, .btn--lightx:hover, .btn--lightx__line:hover, .btn--lighty:hover, .btn--lighty__line:hover, .btn--dark:hover, .btn--dark__line:hover, .btn--darkx:hover, .btn--darkx__line:hover, .btn--darky:hover, .btn--darky__line:hover, .btn--prime:hover, .btn--prime__line:hover {
+.btn:hover, .btn--light:hover, .btn--light__line:hover, .btn--lightx:hover, .btn--lightx__line:hover, .btn--lighty:hover, .btn--lighty__line:hover, .btn--dark:hover, .btn--dark__line:hover, .btn--darkx:hover, .btn--darkx__line:hover, .btn--darky:hover, .btn--darky__line:hover, .btn--prime:hover, .btn--prime__line:hover, .btn--info:hover, .btn--info__line:hover, .btn--dis:hover, .btn--dis__line:hover, .btn--danger:hover, .btn--danger__line:hover, .btn--success:hover, .btn--success__line:hover, .btn--warn:hover, .btn--warn__line:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -190,6 +244,56 @@
   border: var(--color-prime) 1px solid;
 }
 
+.btn--info {
+  background: var(--color-info);
+  color: #ffffff;
+}
+
+.btn--info__line {
+  background: transparent;
+  border: var(--color-info) 1px solid;
+}
+
+.btn--dis {
+  background: var(--color-dis);
+  color: #ffffff;
+}
+
+.btn--dis__line {
+  background: transparent;
+  border: var(--color-dis) 1px solid;
+}
+
+.btn--danger {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.btn--danger__line {
+  background: transparent;
+  border: var(--color-danger) 1px solid;
+}
+
+.btn--success {
+  background: var(--color-success);
+  color: #ffffff;
+}
+
+.btn--success__line {
+  background: transparent;
+  border: var(--color-success) 1px solid;
+}
+
+.btn--warn {
+  background: var(--color-warn);
+  color: #ffffff;
+}
+
+.btn--warn__line {
+  background: transparent;
+  border: var(--color-warn) 1px solid;
+}
+
 .rotate90 {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -206,6 +310,18 @@
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1);
   }
+}
+
+.link {
+  color: var(--color-info) !important;
+}
+
+.iB {
+  display: inline-block;
+}
+
+.rtl {
+  direction: rtl;
 }
 
 input, button {
@@ -278,9 +394,31 @@ html[lang=ar] .dropdown__select--box:before {
   background: rgba(var(--color-dark-rgb), 0.12);
 }
 
-table td, table th {
+table {
+  caption-side: bottom;
+}
+
+table caption {
+  text-align: right;
+  padding: 1em;
+  font-size: 90%;
+}
+
+table th, table td {
   padding: .4em 0;
-  text-align: center;
+  text-align: left;
+  padding-left: .4em;
+  cursor: default;
+}
+
+table th:hover, table td:hover {
+  background-color: rgba(63, 63, 63, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  table th:hover, table td:hover {
+    background-color: rgba(254, 254, 254, 0.05);
+  }
 }
 
 html {
